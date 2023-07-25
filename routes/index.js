@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+require('dotenv').config();
 
 const messages = [
   {
@@ -16,6 +17,7 @@ const messages = [
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  res.send(process.env.SECRET_KEY);
   res.render('index', { arr: messages });
 });
 
