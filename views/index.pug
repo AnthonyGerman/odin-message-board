@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  a(href = '/new') new message
+  each item in arr
+    ul
+      h1= item.text
+      li= item.user 
+      li= item.added

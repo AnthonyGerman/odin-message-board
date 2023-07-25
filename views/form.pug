@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 New message
+    form(action="/new", method="post") 
+        input(type="text", name="name", placeholder="Your name")
+        input(type="text", name="message", placeholder="message")
+        input(type="submit")
+    
